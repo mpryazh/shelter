@@ -2,6 +2,7 @@
     --color-primary-light: #FDDCC4;
     --color-primary: #F1CDB3;
     --color-light-s: #FAFAFA;
+    --color-light-l: #F6F6F6;
     --color-light-xl: #FFFFFF;
     --color-dark-s: #CDCDCD;
     --color-dark-m: #B2B2B2;
@@ -39,7 +40,7 @@ header {
     padding: 0px;
     margin: 0px;
     color: var(--color-primary);
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -49,7 +50,7 @@ header {
 #logo p {
     margin-top: 10px;
     color: var(--color-light-xl);
-    font-family: 'Arial';
+    font-family: 'Arial', sans-serif;
     font-style: normal;
     font-size: 13px;
     line-height: 15px;
@@ -79,7 +80,7 @@ nav li {
 
 }
 nav a {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-size: 15px;
     color: var(--color-dark-s);
     text-decoration: none;
@@ -112,7 +113,7 @@ nav li a:active {
     gap: 42px;
 }
 #notOnly h2 {
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 44px;
@@ -122,7 +123,7 @@ nav li a:active {
     padding: 0px;
 }
 #notOnly p {
-    font-family: 'Arial';
+    font-family: 'Arial', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -136,31 +137,33 @@ nav li a:active {
     max-width: 698px;
     height: auto;
 }
-#notOnly button {
-    width: 207px;
-    height: 52px;
+.buttonPrimary {
+    width: fit-content;
+    padding: 15px 45px;
     background: var(--color-primary);
     border-radius: 100px;
     border: none;
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
     line-height: 130%;
     letter-spacing: 0.06em;
-    color: #545454;
+    color: var(--color-dark-l);
 }
-#notOnly button:hover {
+.buttonPrimary:hover {
     background-color: var(--color-primary-light);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    color: var(--color-dark-3xl)
+    color: var(--color-dark-3xl);
 }
 #about {
     height: 588px;
+    box-sizing: border-box;
     display: flex;
-    margin: 80px 40px 100px;
+    padding: 80px 40px 100px;
     justify-content: center;
     gap: 120px;
+    background-color: var(--color-light-xl);
 }
 #aboutPets {
     width: 300px;
@@ -173,9 +176,9 @@ nav li a:active {
     flex-direction: column;
     gap: 25px;
 }
-#about article h2{
+h2{
     color: var(--color-dark-l);
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
@@ -185,10 +188,146 @@ nav li a:active {
 }
 #about article p {
     color: (--color-dark-xl);
-    font-family: 'Arial';
+    font-family: 'Arial', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 160%;
     margin: 0px;
+}
+#petsPage {
+    height: 877px;
+    background-color: var(--color-light-l);
+    padding: 80px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+#petsPage h2 {
+    text-align: center;
+}
+#slider {
+    display: flex;
+    flex-direction: row;
+    gap: 53px;
+    align-items: center;
+    justify-content: center;
+}
+#cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 90px;
+}
+.arrow {
+    width: 52px;
+    height: 52px;
+    border: 2px solid var(--color-primary);
+    border-radius: 100px;
+}
+.arrow:hover {
+    background-color: var(--color-primary-light);
+    border: 2px solid var(--color-primary-light);
+}
+.card {
+    width: 270px;
+    height: 435px;
+    background-color: var(--color-light-s);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-radius: 9px;
+}
+.card img {
+    border-radius: 9px 9px 0px 0px;
+    width: 270px;
+    height: 270px;
+}
+.card p {
+    font-family: 'Georgia', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    height: 23px;
+    margin: 0px;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
+}
+.card button {
+    width: 187px;
+    height: 52px;
+    color: var(--color-dark-3xl);
+    border: solid 2px #F1CDB3;
+    background-color: transparent;
+    border-radius: 100px;
+}
+#getToKnow111 {
+    color: color-dark-3xl;
+    width: 261px;
+    height: 52px;
+    padding: 15px 45px;
+    background: var(--color-primary);
+    border-radius: 100px;
+    border: none;
+    white-space: nowrap;
+    font-family: 'Georgia', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+}
+#helpPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    height: 431px;
+    margin: 80px 40px 100px 40px;
+    background-color: var(--color-light-xl);
+}
+#helpPage h2 {
+text-align: center;
+}
+#helpPage img {
+    width: 60px;
+    height: 60px;
+}
+#helpPage ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    list-style-type: none;
+    column-gap: 120px;
+    row-gap: 55px;
+    margin: auto;
+    height: 281px;
+    /* width: 1026px; */
+    width: 1029px;
+    padding: 0px;
+}
+#helpPage li {
+    height: 113px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 0px;
+}
+#helpPage li p {
+    margin: 0px;
+    padding: 0px;
+    height: 23px;
+    font-family: 'Georgia', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
 }
