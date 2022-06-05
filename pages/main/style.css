@@ -98,6 +98,10 @@ nav li a:active {
     color: var(--color-light-s);
     
 }
+#current_page {
+    border-bottom: 3px solid var(--color-primary);
+    border-top: 3px solid transparent;
+}
 #startScreenContent {
     margin: 0px 40px;
     padding: 0px;
