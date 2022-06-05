@@ -1,0 +1,57 @@
+header {
+    padding: 30px 40px;
+}
+#logo h1, nav a {
+    color: var(--color-dark-l);
+}
+#logo p {
+    color: var(--color-dark-3xl);
+}
+nav a:hover {
+    color: var(--color-dark-m);
+}
+nav a:active {
+    color: var(--color-dark-m);
+}
+nav li a:active {
+    color: var(--color-dark-m);
+}
+main {
+    height: 1342px;
+    padding: 80px 40px 100px 40px;
+    box-sizing: border-box;
+    background-color: var(--color-light-l);
+}
+main h2 {
+    text-align: center;
+}
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 30px;
+    margin: 60px auto;
+    width: 1200px;
+    justify-content: center;    
+}
+#cards_navigation {
+    margin: 0px auto;
+    width: fit-content;
+    display:flex;
+    gap: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+}
+button:disabled {
+    color: var(--color-dark-s);
+    border-color: var(--color-dark-s);
+}
+button:disabled:hover {
+    color: var(--color-dark-s);
+    border-color: var(--color-dark-s);
+    background-color: transparent;
+}
+#current_nav {
+    background-color: var(--color-primary);
+}

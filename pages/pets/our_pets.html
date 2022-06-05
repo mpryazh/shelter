@@ -15,14 +15,14 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#about">About the shelter</a></li>
-                <li><a href="#pets">Our pets</a></li>
-                <li><a href="#help">Help the shelter</a></li>
+                <li><a href="../main/index.html">About the shelter</a></li>
+                <li id="current_page"><a href="our_pets.html">Our pets</a></li>
+                <li><a href="../main/index.html #help">Help the shelter</a></li>
                 <li><a href="#contacts">Contacts</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <h2>Our friends who<br>are looking for a house</h2>
         <div id="cards">
@@ -58,7 +58,7 @@
             </figure>
             <figure class="card">
                 <img src="../../assets/images/pets-scarlet.png" alt="the smallest puppy">
-                <p class="name">Scarlet</p>
+                <p class="name">Scarlett</p>
                 <button>Learn more</button>
             </figure>
             <figure class="card">
@@ -66,6 +66,13 @@
                 <p class="name">Freddie</p>
                 <button>Learn more</button>
             </figure>
+        </div>
+        <div id="cards_navigation">
+            <button disabled class="arrow"><<</button>
+            <button disabled class="arrow"><</button>
+            <button class="arrow" id="current_nav">1</button>
+            <button class="arrow">></button>
+            <button class="arrow">>></button>
         </div>
     </main>
 
