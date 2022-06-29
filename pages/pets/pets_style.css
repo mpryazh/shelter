@@ -22,7 +22,7 @@ main {
     box-sizing: border-box;
     background-color: var(--color-light-l);
 }
-main h2 {
+main h3 {
     text-align: center;
 }
 #cards {
