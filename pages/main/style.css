@@ -85,6 +85,7 @@ header {
     height: 100%;
 }
 #logo h1 {
+    white-space: nowrap;
     padding: 0px;
     margin: 0px;
     color: var(--color-primary);
@@ -633,7 +634,7 @@ footer a {
     #cards {
         justify-content: center;
     }
-    .card-2, card-3 {
+    .card-2, .card-3 {
         display: none;
     }
     #help {
