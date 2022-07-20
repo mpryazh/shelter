@@ -16,6 +16,16 @@ nav a:active {
 nav li a:active {
     color: var(--color-dark-m);
 }
+nav li {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+}
+.current-page a {
+    color: var(--color-dark-3xl);
+}
 main {
     height: 1342px;
     padding: 80px 40px 100px 40px;
@@ -34,7 +44,7 @@ main h3 {
     width: 1200px;
     justify-content: center;    
 }
-#cards_navigation {
+#cards-navigation {
     margin: 0px auto;
     width: fit-content;
     display:flex;
@@ -54,4 +64,18 @@ button:disabled:hover {
 }
 #current_nav {
     background-color: var(--color-primary);
+}
+/* @media (768px <= width < 1280px) {
+    
+}
+@media (320px <= width < 768px) {
+    
+}
+@media (width < 320px) {
+    
+} */
+@media (max-width: 1000px) {
+    body {
+       
+    }
 }
