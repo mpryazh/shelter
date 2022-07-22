@@ -8,10 +8,11 @@
     <title>Shelter</title>
 </head>
 <body>
+    <div class="blackout"></div>
     <section id="start-screen">
         <div class="wrapper">
         <header>
-            <div id="logo">
+            <div class="logo">
                 <h1>Cozy House</h1>
                 <p>Shelter for pets in Boston</p>
             </div>
@@ -22,12 +23,13 @@
                     <li><a href="#help" class="paragraph-l">Help the shelter</a></li>
                     <li><a href="#contacts" class="paragraph-l">Contacts</a></li>
                 </ul>
-                <p><svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <p id="burger"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line y1="21" x2="30" y2="21" stroke="#F1CDB3" stroke-width="2"/>
                     <line y1="11" x2="30" y2="11" stroke="#F1CDB3" stroke-width="2"/>
                     <line y1="1" x2="30" y2="1" stroke="#F1CDB3" stroke-width="2"/>
                     </svg>
                 </p>
+                <div id="mobile-menu" class="hidden closed"></div>
             </nav>
         </header>
         <div id="start-screen-content">
@@ -142,6 +144,7 @@
     </section>
 
     <footer>
+        <div id="footer-content">
             <div id="contacts">
                 <h3>For questions<br>and suggestions</h3>
                 <div class="info">
@@ -165,6 +168,8 @@
                 </div>
             </div>
             <img src="../../assets/images/footer-puppy.png">
+        </div>
     </footer>
+    <script src="../../scripts/mobile_menu.js"></script>
 </body>
 </html>

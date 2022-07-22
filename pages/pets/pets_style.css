@@ -1,10 +1,12 @@
 header {
     padding: 30px 40px;
+    max-width: 1280px;
+    margin: auto;
 }
-#logo h1, nav a {
+.logo h1, nav a {
     color: var(--color-dark-l);
 }
-#logo p {
+.logo p {
     color: var(--color-dark-3xl);
 }
 nav {
@@ -112,5 +114,8 @@ button:disabled:hover {
     }
     #cards-navigation {
         gap: 10px;
+    }
+    #mobile-menu {
+        background-color: var(--color-light-s);
     }
 }

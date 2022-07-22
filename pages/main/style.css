@@ -78,13 +78,12 @@ header {
     height: 60px;
     align-items: center;
 }
-#logo {
+.logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
 }
-#logo h1 {
+.logo h1 {
     white-space: nowrap;
     padding: 0px;
     margin: 0px;
@@ -96,7 +95,7 @@ header {
     line-height: 110%;
     letter-spacing: 0.06em;
 }
-#logo p {
+.logo p {
     margin-top: 10px;
     color: var(--color-light-xl);
     font-family: 'Arial', sans-serif;
@@ -126,7 +125,7 @@ nav li {
     box-sizing: border-box;
     /* margin-top: -3px; */
 }
-nav p {
+#burger {
     display: none; 
 }
 a, button {
@@ -150,6 +149,7 @@ nav li a:active {
 .current-page {
     border-bottom: 3px solid var(--color-primary);
     border-top: 3px solid transparent;
+    width: fit-content;
 }
 .current-page a {
     color: var(--color-light-s);
@@ -408,13 +408,17 @@ text-align: center;
     margin-bottom: auto;
 }
 footer {
+    background-image: url("../../assets/images/footer-gradient-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#footer-content {
+    max-width: 1280px;
     padding: 56px 40px 0px 40px;
     display: flex;
     justify-content: space-between;
     gap: 160px;
-    background-image: url("../../assets/images/footer-gradient-background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: auto;
 }
 #contacts {
     /* margin-top: 16px; */
@@ -477,6 +481,9 @@ footer a {
     width: 22px;
     display: inline-block;
 }
+.hidden {
+    display: none !important;
+}
 @media all and (max-width: 1280px) {
     header {
         padding: 30px;
@@ -515,6 +522,7 @@ footer a {
     #slider {
         grid-template-areas: 
         "back-arrow card card forward-arrow";
+        column-gap: 12px;
     }
     #cards {
         width: 580px;
@@ -541,7 +549,7 @@ footer a {
         gap: 60px;
         padding-bottom: 100px;
     }
-    footer {
+    #footer-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 60px;
@@ -555,12 +563,11 @@ footer a {
     }
 }
 @media all and (max-width: 768px) {
-    /* TEMORARY */
     body {
-        width: 100%;
+        max-width: 100vh;
         min-width: 320px;
+        overflow-x: hidden;
     }
-    
     #not-only {
         width: 100%;
         max-width: 450px;
@@ -579,8 +586,76 @@ footer a {
     nav ul {
         display: none;
     }
-    nav p {
+    .menu-open {
+        overflow-y: hidden;
+    }
+    .menu-open header > .logo {
+        visibility: hidden;
+    }
+    .menu-open .blackout {
+        position: absolute;
+        height: 100vh;
+        width: 100vh;
+        background-color: rgba(41, 41, 41, 0.6);
+        z-index: 1;
+    }
+    #burger {
         display: inline-block;
+        position: relative;
+        z-index: 3;
+    }
+    .burger-open {
+        transform: rotate(90deg);
+        transform-origin: center;
+        transition: transform 0.3s linear;
+    }
+    .burger-closed {
+        transform: rotate(0deg);
+        transform-origin: center;
+        transition: transform 0.3s linear;
+    }
+    #mobile-menu {
+        height: 100vh;
+        width: 320px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        background-color: var(--color-dark-3xl);
+        display: grid;
+        z-index: 2;
+    }
+    .open {
+        animation-name: open-menu;
+        animation-duration: 0.3s;
+    }
+    .closed {
+        animation-name: close-menu;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
+
+    #mobile-menu .logo {
+        padding: 30px 10px;
+        width: fit-content;
+    }
+    #mobile-menu ul {
+        display: grid;
+        gap: 40px;
+        text-align: center;
+        justify-content: center;
+        height: fit-content;
+    }
+    #mobile-menu a {
+        font-size: 32px;
+    }
+    @keyframes open-menu {
+        from {right: -320px;}
+        to {right: 0px;}
+    }
+    @keyframes close-menu {
+        from {right: 0px;}
+        to {right: -320px;
+            display: none;}
     }
     #start-screen-content {
         text-align: center;
@@ -633,6 +708,7 @@ footer a {
     }
     #cards {
         justify-content: center;
+        width: fit-content;
     }
     .card-2, .card-3 {
         display: none;
@@ -682,7 +758,7 @@ footer a {
         min-width: 260px;
         height: auto;
     }
-    footer {
+    #footer-content {
         display: flex;
         flex-direction: column;
         gap: 40px;
