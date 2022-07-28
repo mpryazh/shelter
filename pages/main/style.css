@@ -230,19 +230,23 @@ nav li a:active {
 }
 #slider {
     display: grid;
-    column-gap: 53px;
+    width: 1200px;
+    gap: 53px;
     grid-template-areas: 
         "back-arrow card card card forward-arrow";
     align-items: center;
     justify-content: center;
 }
-#cards {
+#cards-container {
+    overflow-x: hidden;
     grid-area: card;
-    width: 990px;
+}
+#cards {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    gap: 90px;
+}
+.reverse-cards {
+    flex-direction: row-reverse;
 }
 .arrow {
     width: 52px;
@@ -253,6 +257,7 @@ nav li a:active {
     display: grid;
     align-items: center;
     justify-items: center;
+    z-index: 1;
 }
 .back-arrow {
     grid-area: back-arrow;
@@ -522,14 +527,11 @@ footer a {
     #slider {
         grid-template-areas: 
         "back-arrow card card forward-arrow";
-        column-gap: 12px;
+        gap: 12px;
     }
     #cards {
         width: 580px;
         gap: 40px;
-    }
-    .card-3 {
-        display: none;
     }
     #help {
         width: 82%;
@@ -698,20 +700,18 @@ footer a {
         grid-template-areas: 
         "card card"
         "back-arrow forward-arrow";
-        justify-items: start;
+        /* justify-items: start; */
         justify-content: center;
-        column-gap: 80px;
+        gap: 80px;
         row-gap: 20px;
     }
     .back-arrow {
         justify-self: end;
     }
     #cards {
-        justify-content: center;
-        width: fit-content;
-    }
-    .card-2, .card-3 {
-        display: none;
+        /* justify-content: center; */
+        width: 270px;
+        gap: 20px;
     }
     #help {
         margin: 42px 15px;
