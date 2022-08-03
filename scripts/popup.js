@@ -13,7 +13,7 @@ let img = popupDiv.querySelector("img");
 let closeBtn = document.querySelector("#close-popup");
 
 function popup(pets, target) {
-    // name = key
+    // name is a key
     const theName = target.parentNode.querySelector(".name").textContent;
 
     for (let pet of pets) {
@@ -46,4 +46,3 @@ function hidePopup() {
     blackout.classList.remove("blackout-on");
     document.body.classList.remove("overflow-hidden");
 }
-// overflow-y: hidden;

@@ -10,7 +10,7 @@ const navigation = document.querySelector("nav ul").cloneNode(true);
 menu.append(menuLogo, navigation);
 
 const burger = document.querySelector("#burger");
-burger.addEventListener("click", openMenu);
+burger.addEventListener("click", toggleMenu);
 
 // close menu when click on links
 const menuLinks = menu.querySelectorAll("a");
@@ -20,8 +20,7 @@ menuLinks.forEach(link => link.addEventListener("click", closeMenu));
 const blackout = document.querySelector(".blackout");
 blackout.addEventListener("click", closeMenu);
 
-function openMenu() {
-    // open/close menu
+function toggleMenu() {
     if (menu.className == "open") {
         closeMenu();
     }
@@ -29,6 +28,7 @@ function openMenu() {
         menu.className = "open";
         burger.className = "burger-open";
         blackout.className += " blackout-on";
+        document.body.className += " overflow-hidden"
     }
 }
 function closeMenu() {
@@ -39,8 +39,5 @@ function closeMenu() {
     setTimeout(() => menu.className += " hidden", 300);
 
     blackout.classList.remove("blackout-on");
+    document.body.classList.remove("overflow-hidden");
 }
-
-
-
-

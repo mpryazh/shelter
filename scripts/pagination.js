@@ -1,5 +1,15 @@
 "use strict";
 
+const n = 6; // number of pages
+let pages = document.querySelector("#pages");
+let indexes = [...Array(8).keys()];
+
+let cardsPage = document.querySelector(".cards");
+for (let i=0; i<n-1; i++) {
+    let newPage = cardsPage.cloneNode(true);
+    pages.append(newPage);
+}
+
 fetch('../main/pets.json')
   .then(response => response.json())
   .then(processData)
@@ -8,24 +18,14 @@ function processData(data) {
     let pets = []; 
     for (let pet of data) {
         pets.push(pet);
-    }
+    } 
 
     let cards = document.querySelectorAll(".card");
     addInfo(cards, pets);
-
-    let cardsPage = document.querySelector("#cards");
-    for (let i=0; i<5; i++) {
-        let newPage = cardsPage.cloneNode(true);
-        addInfo(newPage.querySelectorAll(".card"),pets)
-        pages.append(newPage);
-    }
 }
 
-let pages = document.querySelector("#pages");
-
-
 function addInfo(cards, pets) {
-    let newPets = getPets(pets);
+    let newPets = getPets(pets, n);
 
     cards.forEach(card => {
         let thePet = newPets.pop();
@@ -38,13 +38,16 @@ function addInfo(cards, pets) {
     });
 }
 
-function getPets(pets) {
-    shuffle(indexes);
-    let currentPets = [];
-    for (let i of indexes) {
-        currentPets.push(pets[i]);
+function getPets(petsData, n=1) {
+    let pets = [];
+    
+    for (let i=0; i<n; i++) {
+        shuffle(indexes);
+        for (let i of indexes) {
+            pets.push(petsData[i]);
+        }
     }
-    return currentPets;
+    return pets;
 }
 
 function shuffle(array) {
@@ -54,8 +57,6 @@ function shuffle(array) {
       [array[i], array[j]] = [array[j], array[i]];
     }
 }
-
-let indexes = [...Array(8).keys()];
 
 
 const nextBtn = document.querySelector(".to-next");
@@ -83,7 +84,6 @@ const pagesStyle = getComputedStyle(movable);
 const gap = +pagesStyle.gap.slice(0,-2);
 const distance = movable.offsetWidth + gap; // how far to move cards
 
-
 function leftSlide(){
     animate(-distance);
     pageNumber++;
@@ -100,7 +100,7 @@ function toFirst() {
     }
 }
 function toLast() {
-    while(pageNumber != 6) {
+    while(pageNumber != n) {
         leftSlide();
     }  
 }
@@ -122,6 +122,6 @@ function changeButtonsState() {
     firstBtn.disabled = pageNumber == 1;
     backBtn.disabled = pageNumber == 1;
 
-    lastBtn.disabled = pageNumber == 6;
-    nextBtn.disabled = pageNumber == 6;
+    lastBtn.disabled = pageNumber == n;
+    nextBtn.disabled = pageNumber == n;
 }

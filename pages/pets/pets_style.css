@@ -38,6 +38,8 @@ main {
 }
 main h3 {
     text-align: center;
+    margin: auto;
+    width: 100%;
 }
 #pagination {
     width: 1200px;
@@ -48,7 +50,7 @@ main h3 {
     display: flex;
     gap: 30px;
 }
-#cards {
+.cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 40px;
@@ -90,7 +92,7 @@ button:disabled:hover {
     #pagination {
         width: 580px;
     }
-    #cards {
+    .cards {
         grid-template-columns: repeat(2, 1fr);
         margin: 30px auto 40px;
     }
@@ -113,7 +115,7 @@ button:disabled:hover {
     #pagination {
         width: 270px;
     }
-    #cards {
+    .cards {
         margin: 42px auto;
         grid-template-columns: 1fr;
     }
