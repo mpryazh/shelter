@@ -8,171 +8,199 @@
     <title>Shelter</title>
 </head>
 <body>
-    <div class="blackout"></div>
-    <section id="start-screen">
-        <div class="wrapper">
-        <header>
-            <div class="logo">
-                <h1>Cozy House</h1>
-                <p>Shelter for pets in Boston</p>
+<div class="blackout"></div>
+<section id="start-screen">
+    <div class="wrapper">
+    <header>
+        <div class="logo">
+            <h1>Cozy House</h1>
+            <p>Shelter for pets in Boston</p>
+        </div>
+        <nav>
+            <ul>
+                <li class="current-page"><a href="#about" class="paragraph-l">About the shelter</a></li>
+                <li><a href="../pets/our_pets.html" class="paragraph-l">Our pets</a></li>
+                <li><a href="#help" class="paragraph-l">Help the shelter</a></li>
+                <li><a href="#contacts" class="paragraph-l">Contacts</a></li>
+            </ul>
+            <p id="burger"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="21" x2="30" y2="21" stroke="#F1CDB3" stroke-width="2"/>
+                <line y1="11" x2="30" y2="11" stroke="#F1CDB3" stroke-width="2"/>
+                <line y1="1" x2="30" y2="1" stroke="#F1CDB3" stroke-width="2"/>
+                </svg>
+            </p>
+            <div id="mobile-menu" class="hidden closed"></div>
+        </nav>
+    </header>
+    <div id="start-screen-content">
+        <div id="not-only">
+            <h2>Not only people <br>need a house</h2>
+            <p class="paragraph-l">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
+            <button class="button-primary" onclick="location.href='#pets'">Make a friend</button>
+        </div>
+            <img src="../../assets/images/start-screen-puppy.png" alt="peaceful dog" id="start-screen-puppy">
+    </div>
+    </div>
+</section>
+
+<section id="about">
+    <img src="../../assets/images/about-pets.png" alt="Friendly cat and dog looking at you" id="aboutPets"> 
+    <article>
+        <h3>About the shelter <br>“Cozy House”</h3>
+        <p class="paragraph-l">Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.</p>
+        <p class="paragraph-l p2">We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.</p>
+    </article>
+</section>
+
+<section id="pets">
+    <h3>Our friends who <br>are looking for a house</h3>
+    <div id="slider">
+        <button class="arrow back-arrow">
+            <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929"/>
+                </svg>
+        </button>
+        <div id="cards-container">
+            <div id="cards">
+                <figure class="card card-1">
+                    <img>
+                    <p class="name"></p>
+                    <button class="learn-more">Learn more</button>
+                </figure>
+                <figure class="card card-2">
+                    <img>
+                    <p class="name"></p>
+                    <button class="learn-more">Learn more</button>
+                </figure>
+                <figure class="card card-3">
+                    <img>
+                    <p class="name"></p>
+                    <button class="learn-more">Learn more</button>
+                </figure>
             </div>
-            <nav>
+        </div>
+        <button class="arrow forward-arrow">
+            <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 4V2L11 2V0L14 3L11 6V4L0 4Z" fill="#292929"/>
+                </svg>
+        </button>
+    </div>
+    <button class="button-primary" onclick="location.href='../pets/our_pets.html'">Get to know the rest</button>
+
+    <div id="popup-and-button">
+        <button id="close-popup" class="hidden arrow">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.42618 6.00003L11.7046 1.72158C12.0985 1.32775 12.0985 0.689213 11.7046 0.295433C11.3108 -0.0984027 10.6723 -0.0984027 10.2785 0.295433L5.99998 4.57394L1.72148 0.295377C1.32765 -0.098459 0.68917 -0.098459 0.295334 0.295377C-0.0984448 0.689213 -0.0984448 1.32775 0.295334 1.72153L4.57383 5.99997L0.295334 10.2785C-0.0984448 10.6723 -0.0984448 11.3108 0.295334 11.7046C0.68917 12.0985 1.32765 12.0985 1.72148 11.7046L5.99998 7.42612L10.2785 11.7046C10.6723 12.0985 11.3108 12.0985 11.7046 11.7046C12.0985 11.3108 12.0985 10.6723 11.7046 10.2785L7.42618 6.00003Z" fill="#292929"/>
+            </svg>
+        </button>
+        <div id="popup" class="hidden">
+            <img>
+            <div id="popup-info">
+                <div>
+                    <h3 class="name"></h3>
+                    <h4 class="breed"></h4>
+                </div>
+                <h5 class="description"></h5>
                 <ul>
-                    <li class="current-page"><a href="#about" class="paragraph-l">About the shelter</a></li>
-                    <li><a href="../pets/our_pets.html" class="paragraph-l">Our pets</a></li>
-                    <li><a href="#help" class="paragraph-l">Help the shelter</a></li>
-                    <li><a href="#contacts" class="paragraph-l">Contacts</a></li>
+                    <li><h5 class="age"></h5></li>
+                    <li><h5 class="inoculations"></h5></li>
+                    <li><h5 class="diseases"></h5></li>
+                    <li><h5 class="parasites"></h5></li>
                 </ul>
-                <p id="burger"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line y1="21" x2="30" y2="21" stroke="#F1CDB3" stroke-width="2"/>
-                    <line y1="11" x2="30" y2="11" stroke="#F1CDB3" stroke-width="2"/>
-                    <line y1="1" x2="30" y2="1" stroke="#F1CDB3" stroke-width="2"/>
-                    </svg>
-                </p>
-                <div id="mobile-menu" class="hidden closed"></div>
-            </nav>
-        </header>
-        <div id="start-screen-content">
-            <div id="not-only">
-                <h2>Not only people <br>need a house</h2>
-                <p class="paragraph-l">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
-                <button class="button-primary" onclick="location.href='#pets'">Make a friend</button>
+            </div>        
+        </div>
+    </div>
+    
+</section>
+
+<section id="help">
+    <h3>How you can help <br>our shelter</h3>
+    <ul>
+        <li>
+            <img src="../../assets/icons/icon-pet-food.png" alt="">
+            <p>Pet food</p>
+        </li>
+        <li>
+            <img src="../../assets/icons/icon-transportation.png" alt="">
+            <p>Transportation</p>
+        </li>
+        <li>
+            <img src="../../assets/icons/icon-toys.png" alt="">
+            <p>Toys</p>
+        </li>
+        <li>
+            <img src="../../assets/icons/icon-bowls-and-cups.png" alt="">
+            <p>Bowls and cups</p>
+        </li>
+        <li>
+            <img src="../../assets/icons/icon-shampoos.png" alt="">
+            <p>Shampoos</p>
+        </li>
+        <li>
+            <img src="../../assets/icons/icon-vitamins.png" alt="">
+            <p>Vitamins</p>
+        </li>
+        <li>
+            <img src="../../assets/icons/icon-medicines.png" alt="">
+            <p>Medicines</p>
+        </li>
+        <li>
+            <img src="../../assets/icons/icon-collars-leashes.png" alt="">
+            <p>Collars / leashes</p>
+        </li>
+        <li>
+            <img src="../../assets/icons/icon-sleeping-area.png" alt="">
+            <p>Sleeping area</p>
+        </li>
+    </ul>
+</section>
+
+<section id="donation">
+        <img src="../../assets/images/donation-dog.png" alt="handsome puppy">
+        <div id="content">
+            <h3>You can also <br>make a donation</h3>
+            <h5>Name of the bank / Type of bank account</h5>
+            <a href="#" id="credit-card">
+                <svg width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.9815 23H4.01915C1.80285 23 0 21.2046 0 19.0001V3.9999C0 1.79421 1.80285 0 4.01915 0H25.9808C28.196 0 30 1.79421 30 3.9999V19.0001C30.0006 21.2052 28.1972 23 25.9815 23ZM4.01915 1.14285C2.43563 1.14285 1.14836 2.42396 1.14836 3.9999V19.0001C1.14836 20.5755 2.43563 21.8571 4.01915 21.8571H25.9808C27.5638 21.8571 28.8516 20.5755 28.8516 19.0001V3.9999C28.8516 2.42396 27.5638 1.14285 25.9808 1.14285H4.01915ZM20.7037 3.35993C22.1363 3.35993 23.2977 4.51532 23.2977 5.94153C23.2977 7.36774 22.1368 8.52376 20.7037 8.52376C19.2706 8.52376 18.1097 7.36783 18.1097 5.94153C18.1097 4.51523 19.2712 3.35993 20.7037 3.35993ZM24.3204 3.35993C25.7529 3.35993 26.9151 4.51532 26.9151 5.94153C26.9151 7.36774 25.7536 8.52376 24.3204 8.52376C22.8873 8.52376 21.7264 7.36783 21.7264 5.94153C21.7264 4.51523 22.8879 3.35993 24.3204 3.35993ZM3.0861 16.3339H7.8683V18.0481H3.0861V16.3339ZM9.43467 16.3339H14.2175V18.0481H9.43467V16.3339ZM15.782 16.3339H20.5659V18.0481H15.782V16.3339ZM22.1305 16.3339H26.9144V18.0481H22.1305V16.3339ZM3.0861 3.36046H12.1263V5.07474H3.0861V3.36046ZM3.0861 6.76208H7.86946V8.47637H3.0861V6.76208Z" fill="#292929"/>
+                </svg>  
+                <span>8380 2880 8028 8791 7435</span>
+            </a>
+            <small class="paragraph-s">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</small>
+    </div>
+</section>
+
+<footer>
+    <div id="footer-content">
+        <div id="contacts">
+            <h3>For questions<br>and suggestions</h3>
+            <div class="info">
+                <p class="icon-email"></p>
+                <h4><a href="mailto:email@shelter.com" target="_blank">
+                email@shelter.com
+                </a></h4><br>
+                
+                <p class="icon-phone"></p>
+                <h4><a href="tel:+136745677554" target="_blank">+13 674 567 75 54</a></h4>
             </div>
-                <img src="../../assets/images/start-screen-puppy.png" alt="peaceful dog" id="start-screen-puppy">
         </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <img src="../../assets/images/about-pets.png" alt="Friendly cat and dog looking at you" id="aboutPets"> 
-        <article>
-            <h3>About the shelter <br>“Cozy House”</h3>
-            <p class="paragraph-l">Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.</p>
-            <p class="paragraph-l p2">We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.</p>
-        </article>
-    </section>
-
-    <section id="pets">
-        <h3>Our friends who <br>are looking for a house</h3>
-        <div id="slider">
-            <button class="arrow back-arrow">
-                <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929"/>
-                    </svg>
-            </button>
-            <div id="cards-container">
-                <div id="cards">
-                    <figure class="card card-1">
-                        <img>
-                        <p class="name"></p>
-                        <button>Learn more</button>
-                    </figure>
-                    <figure class="card card-2">
-                        <img>
-                        <p class="name"></p>
-                        <button>Learn more</button>
-                    </figure>
-                    <figure class="card card-3">
-                        <img>
-                        <p class="name"></p>
-                        <button>Learn more</button>
-                    </figure>
-                </div>
+        <div id="locations">
+            <h3>We are waiting <br> for your visit</h3>
+            <div class="info">
+                <p class=icon-location></p>
+                <h4><a href="https://goo.gl/maps/PBX7fzPnRnRurdzS6" target="_blank">1 Central Street, Boston<br>(entrance from the store)</a></h4>
+                
+                <p class=icon-location></p>
+                <h4><a href="https://goo.gl/maps/jkmyuq8F4uhhkyNr8" target="_blank">18 South Park, London</a></h4>
             </div>
-            <button class="arrow forward-arrow">
-                <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 4V2L11 2V0L14 3L11 6V4L0 4Z" fill="#292929"/>
-                    </svg>
-            </button>
         </div>
-        <button class="button-primary">Get to know the rest</button>
-    </section>
+        <img src="../../assets/images/footer-puppy.png">
+    </div>
+</footer>
 
-    <section id="help">
-        <h3>How you can help <br>our shelter</h3>
-        <ul>
-            <li>
-                <img src="../../assets/icons/icon-pet-food.png" alt="">
-                <p>Pet food</p>
-            </li>
-            <li>
-                <img src="../../assets/icons/icon-transportation.png" alt="">
-                <p>Transportation</p>
-            </li>
-            <li>
-                <img src="../../assets/icons/icon-toys.png" alt="">
-                <p>Toys</p>
-            </li>
-            <li>
-                <img src="../../assets/icons/icon-bowls-and-cups.png" alt="">
-                <p>Bowls and cups</p>
-            </li>
-            <li>
-                <img src="../../assets/icons/icon-shampoos.png" alt="">
-                <p>Shampoos</p>
-            </li>
-            <li>
-                <img src="../../assets/icons/icon-vitamins.png" alt="">
-                <p>Vitamins</p>
-            </li>
-            <li>
-                <img src="../../assets/icons/icon-medicines.png" alt="">
-                <p>Medicines</p>
-            </li>
-            <li>
-                <img src="../../assets/icons/icon-collars-leashes.png" alt="">
-                <p>Collars / leashes</p>
-            </li>
-            <li>
-                <img src="../../assets/icons/icon-sleeping-area.png" alt="">
-                <p>Sleeping area</p>
-            </li>
-        </ul>
-    </section>
+<script src="../../scripts/mobile_menu.js"></script>
+<script src="../../scripts/popup.js"></script>
+<script src="../../scripts/carousel.js"></script>
 
-    <section id="donation">
-            <img src="../../assets/images/donation-dog.png" alt="handsome puppy">
-            <div id="content">
-                <h3>You can also <br>make a donation</h3>
-                <h5>Name of the bank / Type of bank account</h5>
-                <a href="#" id="credit-card">
-                    <svg width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M25.9815 23H4.01915C1.80285 23 0 21.2046 0 19.0001V3.9999C0 1.79421 1.80285 0 4.01915 0H25.9808C28.196 0 30 1.79421 30 3.9999V19.0001C30.0006 21.2052 28.1972 23 25.9815 23ZM4.01915 1.14285C2.43563 1.14285 1.14836 2.42396 1.14836 3.9999V19.0001C1.14836 20.5755 2.43563 21.8571 4.01915 21.8571H25.9808C27.5638 21.8571 28.8516 20.5755 28.8516 19.0001V3.9999C28.8516 2.42396 27.5638 1.14285 25.9808 1.14285H4.01915ZM20.7037 3.35993C22.1363 3.35993 23.2977 4.51532 23.2977 5.94153C23.2977 7.36774 22.1368 8.52376 20.7037 8.52376C19.2706 8.52376 18.1097 7.36783 18.1097 5.94153C18.1097 4.51523 19.2712 3.35993 20.7037 3.35993ZM24.3204 3.35993C25.7529 3.35993 26.9151 4.51532 26.9151 5.94153C26.9151 7.36774 25.7536 8.52376 24.3204 8.52376C22.8873 8.52376 21.7264 7.36783 21.7264 5.94153C21.7264 4.51523 22.8879 3.35993 24.3204 3.35993ZM3.0861 16.3339H7.8683V18.0481H3.0861V16.3339ZM9.43467 16.3339H14.2175V18.0481H9.43467V16.3339ZM15.782 16.3339H20.5659V18.0481H15.782V16.3339ZM22.1305 16.3339H26.9144V18.0481H22.1305V16.3339ZM3.0861 3.36046H12.1263V5.07474H3.0861V3.36046ZM3.0861 6.76208H7.86946V8.47637H3.0861V6.76208Z" fill="#292929"/>
-                    </svg>  
-                    <span>8380 2880 8028 8791 7435</span>
-                </a>
-                <small class="paragraph-s">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</small>
-        </div>
-    </section>
-
-    <footer>
-        <div id="footer-content">
-            <div id="contacts">
-                <h3>For questions<br>and suggestions</h3>
-                <div class="info">
-                    <p class="icon-email"></p>
-                    <h4><a href="mailto:email@shelter.com" target="_blank">
-                    email@shelter.com
-                    </a></h4><br>
-                    
-                    <p class="icon-phone"></p>
-                    <h4><a href="tel:+136745677554" target="_blank">+13 674 567 75 54</a></h4>
-                </div>
-            </div>
-            <div id="locations">
-                <h3>We are waiting <br> for your visit</h3>
-                <div class="info">
-                    <p class=icon-location></p>
-                    <h4><a href="https://goo.gl/maps/PBX7fzPnRnRurdzS6" target="_blank">1 Central Street, Boston<br>(entrance from the store)</a></h4>
-                    
-                    <p class=icon-location></p>
-                    <h4><a href="https://goo.gl/maps/jkmyuq8F4uhhkyNr8" target="_blank">18 South Park, London</a></h4>
-                </div>
-            </div>
-            <img src="../../assets/images/footer-puppy.png">
-        </div>
-    </footer>
-    <script src="../../scripts/mobile_menu.js"></script>
-    <script src="carousel.js"></script>
 </body>
 </html>

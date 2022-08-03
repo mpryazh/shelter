@@ -17,8 +17,8 @@ const menuLinks = menu.querySelectorAll("a");
 menuLinks.forEach(link => link.addEventListener("click", closeMenu));
 
 // close menu when click outside of menu
-const blackoutScreen = document.querySelector(".blackout");
-blackoutScreen.addEventListener("click", closeMenu);
+const blackout = document.querySelector(".blackout");
+blackout.addEventListener("click", closeMenu);
 
 function openMenu() {
     // open/close menu
@@ -28,7 +28,7 @@ function openMenu() {
     else {
         menu.className = "open";
         burger.className = "burger-open";
-        document.body.className = "menu-open";
+        blackout.className += " blackout-on";
     }
 }
 function closeMenu() {
@@ -38,7 +38,7 @@ function closeMenu() {
     // set delay 0.3s for animation before hiding menu
     setTimeout(() => menu.className += " hidden", 300);
 
-    document.body.className = "";
+    blackout.classList.remove("blackout-on");
 }
 
 

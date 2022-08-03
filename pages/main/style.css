@@ -230,12 +230,14 @@ nav li a:active {
 }
 #slider {
     display: grid;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     gap: 53px;
     grid-template-areas: 
         "back-arrow card card card forward-arrow";
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
 #cards-container {
     overflow-x: hidden;
@@ -262,7 +264,7 @@ nav li a:active {
 .back-arrow {
     grid-area: back-arrow;
 }
-forward-arrow {
+.forward-arrow {
     grid-area: forward-arrow;
 }
 .arrow:hover {
@@ -317,6 +319,78 @@ forward-arrow {
     font-size: 17px;
     line-height: 130%;
     letter-spacing: 0.06em;
+}
+#popup-and-button {
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    width: 950px;
+}
+#close-popup {
+    align-self: flex-end;
+}
+#close-popup:focus {
+    background-color: var(--color-primary-light);
+    border: 2px solid var(--color-primary-light);
+}
+#popup {
+    width: 900px;
+    background-color: var(--color-light-s);
+    border-radius: 9px;
+    display: flex;
+    gap: 29px;
+}
+#popup img {
+    width: 500px;
+    height: 500px;
+    border-radius: 9px;
+}
+#popup-info {
+    padding-top: 50px;
+    width: 351px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: #000 !important;
+}
+#popup-info > * {
+    color: #000;
+}
+#popup h3 {
+    text-align: start;
+}
+#popup h5 {
+    white-space: normal;
+}
+#popup ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding-left: 20px;
+}
+#popup li::marker {
+    color: var(--color-primary);
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+.blackout-on { 
+    position: fixed;
+    top: 50%; 
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 400vh;
+    background-color: rgba(41, 41, 41, 0.6);
+    z-index: 2;
+}
+.popup-open {
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 #help {
     display: flex;
@@ -496,7 +570,7 @@ footer a {
     #start-screen-content {
         flex-direction: column;
         align-items: center;
-        width: 77%;
+        /* width: 77%; */
         margin-left: auto;
         margin-right: auto;
         gap: 100px;
@@ -533,6 +607,27 @@ footer a {
         width: 580px;
         gap: 40px;
     }
+    #popup-and-button {
+        width: 682px;
+    }
+    #popup {
+        width: 640px;
+        gap: 9px;
+    }
+    #popup img {
+        width: 350px;
+        height: 350px;;
+    }
+    #popup-info {
+        padding: 10px 9px 0 0;
+        gap: 20px;
+    }
+    #popup .description {
+        font-size: 13px;
+    }
+    #popup ul {
+        gap: 5px;
+    }
     #help {
         width: 82%;
         margin-left: auto;
@@ -568,7 +663,7 @@ footer a {
     body {
         max-width: 100vh;
         min-width: 320px;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
     #not-only {
         width: 100%;
@@ -712,6 +807,21 @@ footer a {
         /* justify-content: center; */
         width: 270px;
         gap: 20px;
+    }
+    #popup-and-button {
+        width: 270px;
+    }
+    #popup {
+        width: 240px;
+    }
+    #popup img {
+        display: none;
+    }
+    #popup-info {
+        padding: 10px;
+    }
+    #popup-info div > * {
+        text-align: center;
     }
     #help {
         margin: 42px 15px;

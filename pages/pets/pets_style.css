@@ -32,7 +32,6 @@ nav li {
     color: var(--color-dark-3xl);
 }
 main {
-    /* height: 1342px; */
     padding: 80px 40px 100px 40px;
     box-sizing: border-box;
     background-color: var(--color-light-l);
@@ -40,13 +39,20 @@ main {
 main h3 {
     text-align: center;
 }
-#cards {
+#pagination {
+    width: 1200px;
+    overflow: hidden;
+    margin: 60px auto;
+}
+#pages {
     display: flex;
-    flex-wrap: wrap;
+    gap: 30px;
+}
+#cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 40px;
     row-gap: 30px;
-    margin: 60px auto;
-    width: 1200px;
     justify-content: center;    
 }
 #cards-navigation {
@@ -67,7 +73,7 @@ button:disabled:hover {
     border-color: var(--color-dark-s);
     background-color: transparent;
 }
-#current_nav {
+#current-page {
     background-color: var(--color-primary);
 }
 
@@ -81,8 +87,11 @@ button:disabled:hover {
     nav ul {
         gap: 43px;
     }
-    #cards {
+    #pagination {
         width: 580px;
+    }
+    #cards {
+        grid-template-columns: repeat(2, 1fr);
         margin: 30px auto 40px;
     }
     .pets-card-7, 
@@ -101,9 +110,12 @@ button:disabled:hover {
     main {
         padding: 42px 10px;
     }
-    #cards {
+    #pagination {
         width: 270px;
+    }
+    #cards {
         margin: 42px auto;
+        grid-template-columns: 1fr;
     }
     .pets-card-4, 
     .pets-card-5, 

@@ -11,8 +11,9 @@ function getCurrentIndexes() {
     if (indexes.length < 3){
         indexes = indexes.concat(previousIndexes.slice(-3))
     }
-    // shuffle aaray of indexes
+
     shuffle(indexes);
+    
     // take first 3 indexes
     previousIndexes = previousIndexes.concat(currentIndexes);
     currentIndexes = indexes.splice(0,3);
@@ -43,9 +44,10 @@ function addInfo(cards, pets) {
         let thePet = newPets.pop();
         let cardImg = card.querySelector("img");
         cardImg.setAttribute("src", thePet.img);
-
         let name = card.querySelector(".name");
         name.innerText = thePet.name;
+        // add popup event
+        card.querySelector("button").addEventListener("click", (event) => popup(pets, event.target));
     });
 }
 
@@ -64,7 +66,6 @@ function processData(data) {
     // put pets info into 3 first cards
     let cards = document.querySelectorAll(".card");
     addInfo(cards, pets);
-    
 
     // slide on click
     let forwardArrow = document.querySelector(".forward-arrow");
@@ -153,5 +154,3 @@ function animate(distance) {
     });
     x += distance;
 }
-
-
