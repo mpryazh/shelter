@@ -14,30 +14,29 @@ burger.addEventListener("click", toggleMenu);
 
 // close menu when click on links
 const menuLinks = menu.querySelectorAll("a");
-menuLinks.forEach(link => link.addEventListener("click", closeMenu));
+menuLinks.forEach((link) => link.addEventListener("click", closeMenu));
 
 // close menu when click outside of menu
 const blackout = document.querySelector(".blackout");
 blackout.addEventListener("click", closeMenu);
 
 function toggleMenu() {
-    if (menu.className == "open") {
-        closeMenu();
-    }
-    else {
-        menu.className = "open";
-        burger.className = "burger-open";
-        blackout.className += " blackout-on";
-        document.body.className += " overflow-hidden"
-    }
+  if (menu.className == "open") {
+    closeMenu();
+  } else {
+    menu.className = "open";
+    burger.className = "burger-open";
+    blackout.className += " blackout-on";
+    document.body.className += " overflow-hidden";
+  }
 }
 function closeMenu() {
-    menu.className = "closed";
-    burger.className = "burger-closed";
+  menu.className = "closed";
+  burger.className = "burger-closed";
 
-    // set delay 0.3s for animation before hiding menu
-    setTimeout(() => menu.className += " hidden", 300);
+  // set delay 0.3s for animation before hiding menu
+  setTimeout(() => (menu.className += " hidden"), 300);
 
-    blackout.classList.remove("blackout-on");
-    document.body.classList.remove("overflow-hidden");
+  blackout.classList.remove("blackout-on");
+  document.body.classList.remove("overflow-hidden");
 }
