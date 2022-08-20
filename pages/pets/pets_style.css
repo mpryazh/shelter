@@ -9,9 +9,6 @@ header {
 .logo p {
     color: var(--color-dark-3xl);
 }
-nav {
-    margin-right: 87px;
-}
 nav a:hover {
     color: var(--color-dark-m);
 }
@@ -61,6 +58,7 @@ main h3 {
     margin: 0 auto;
     width: fit-content;
     display:flex;
+    justify-content: center;
     gap: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 115%;
@@ -83,6 +81,9 @@ button:disabled:hover {
     border-color: var(--color-primary);
     cursor: default;
 }
+#locations {
+    margin-left: 10px;
+}
 
 @media all and (max-width: 1280px) {
     main {
@@ -96,6 +97,7 @@ button:disabled:hover {
     }
     #pagination {
         width: 580px;
+        margin: 0 auto;
     }
     .cards {
         grid-template-columns: repeat(2, 1fr);

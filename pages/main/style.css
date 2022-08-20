@@ -168,6 +168,9 @@ nav li a:active {
   max-width: 698px;
   height: auto;
 }
+#start-screen button {
+  max-width: 210px;
+}
 .button-primary {
   width: fit-content;
   padding: 15px 45px;
@@ -242,9 +245,6 @@ nav li a:active {
   flex-direction: row-reverse;
 }
 .arrow {
-  display: grid;
-  align-items: center;
-  justify-items: center;
   z-index: 1;
   width: 52px;
   height: 52px;
@@ -310,11 +310,14 @@ nav li a:active {
   line-height: 130%;
   letter-spacing: 0.06em;
 }
+#get-to-know {
+  width: 263px;
+}
 #popup-and-button {
   z-index: 3;
   display: flex;
   flex-direction: column;
-  width: 950px;
+  width: 1004px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -328,6 +331,7 @@ nav li a:active {
   border: 2px solid var(--color-primary-light);
 }
 #popup {
+  align-self: center;
   display: flex;
   gap: 29px;
   width: 900px;
@@ -483,11 +487,10 @@ footer h3 {
   padding: 56px 40px 0 40px;
   display: flex;
   justify-content: space-between;
-  gap: 160px;
   margin: auto;
 }
 #contacts {
-  width: 280px;
+  width: 285px;
 }
 #locations {
   width: 320px;
@@ -509,7 +512,7 @@ footer h3 {
 footer img {
   width: 300px;
   height: 310px;
-  margin-right: 12px;
+  margin-top: -20px;
 }
 footer h3 {
   color: var(--color-light-xl);
@@ -590,7 +593,7 @@ footer a {
     gap: 40px;
   }
   #popup-and-button {
-    width: 682px;
+    width: 734px;
   }
   #popup {
     width: 640px;
@@ -637,14 +640,18 @@ footer a {
     justify-items: center;
     padding: 28px 65px 0;
   }
+  #locations {
+    margin-left: -8px;
+  }
   footer img {
     grid-column: 1 / 3;
     margin-right: 20px;
+    margin-top: 0;
   }
 }
 @media all and (max-width: 768px) {
   body {
-    max-width: 100vh;
+    max-width: 100vw;
     min-width: 320px;
   }
   #not-only {
@@ -802,7 +809,7 @@ footer a {
     gap: 20px;
   }
   #popup-and-button {
-    width: 270px;
+    width: 302px;
   }
   #popup {
     width: 240px;
@@ -887,6 +894,7 @@ footer a {
     row-gap: 42px;
     justify-content: start;
     margin-left: 12px;
+    margin-top: 38px;
   }
   #locations h3 {
     margin: 0 22px;
