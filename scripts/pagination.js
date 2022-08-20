@@ -1,11 +1,21 @@
 "use strict";
 
-const n = 6; // number of pages
+const windowSize = window.innerWidth;
+let numberOfPages = windowSize > 1280 ? 6 : windowSize > 768 ? 8 : 16;
+let numberOfCards = 48 / numberOfPages;
+
 let pages = document.querySelector("#pages");
 let indexes = [...Array(8).keys()];
 
+// remove extra cards elements
 let cardsPage = document.querySelector(".cards");
-for (let i = 0; i < n - 1; i++) {
+let extraCardsNumber = 8 - numberOfCards;
+for (let i = 0; i < extraCardsNumber; i++) {
+  cardsPage.lastElementChild.remove();
+}
+
+// create pages
+for (let i = 0; i < numberOfPages - 1; i++) {
   let newPage = cardsPage.cloneNode(true);
   pages.append(newPage);
 }
@@ -25,7 +35,7 @@ function processData(data) {
 }
 
 function addInfo(cards, pets) {
-  let newPets = getPets(pets, n);
+  let newPets = getPets(pets);
 
   cards.forEach((card) => {
     let thePet = newPets.pop();
@@ -34,18 +44,17 @@ function addInfo(cards, pets) {
     let name = card.querySelector(".name");
     name.innerText = thePet.name;
     // add popup event
-    card
-      .addEventListener("click", (event) => popup(pets, event.target));
+    card.addEventListener("click", (event) => popup(pets, event.target));
   });
 }
 
-function getPets(petsData, n = 1) {
+function getPets(petsData) {
   let pets = [];
 
-  for (let i = 0; i < n; i++) {
+  for (let i = 0; i < numberOfPages; i++) {
     shuffle(indexes);
-    for (let i of indexes) {
-      pets.push(petsData[i]);
+    for (let j of indexes.slice(-numberOfCards)) {
+      pets.push(petsData[j]);
     }
   }
   return pets;
@@ -99,7 +108,7 @@ function toFirst() {
   }
 }
 function toLast() {
-  while (pageNumber != n) {
+  while (pageNumber != numberOfPages) {
     leftSlide();
   }
 }
@@ -125,6 +134,6 @@ function changeButtonsState() {
   firstBtn.disabled = pageNumber == 1;
   backBtn.disabled = pageNumber == 1;
 
-  lastBtn.disabled = pageNumber == n;
-  nextBtn.disabled = pageNumber == n;
+  lastBtn.disabled = pageNumber == numberOfPages;
+  nextBtn.disabled = pageNumber == numberOfPages;
 }
