@@ -548,7 +548,7 @@ footer a {
 .hidden {
   display: none !important;
 }
-@media all and (max-width: 1280px) {
+@media all and (max-width: 1279px) {
   header {
     padding: 30px;
   }
@@ -649,7 +649,7 @@ footer a {
     margin-top: 0;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   body {
     max-width: 100vw;
     min-width: 320px;

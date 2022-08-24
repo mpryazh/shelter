@@ -85,7 +85,7 @@ button:disabled:hover {
     margin-left: 10px;
 }
 
-@media all and (max-width: 1280px) {
+@media all and (max-width: 1279px) {
     main {
         padding-bottom: 74px;
     }
@@ -105,7 +105,7 @@ button:disabled:hover {
     }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
     header {
         padding: 30px 50px 30px 10px;
     }

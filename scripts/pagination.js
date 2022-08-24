@@ -1,7 +1,7 @@
 "use strict";
 
 const windowSize = window.innerWidth;
-let numberOfPages = windowSize > 1280 ? 6 : windowSize > 768 ? 8 : 16;
+let numberOfPages = windowSize >= 1280 ? 6 : windowSize >= 768 ? 8 : 16;
 let numberOfCards = 48 / numberOfPages;
 
 let pages = document.querySelector("#pages");

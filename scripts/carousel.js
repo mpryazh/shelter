@@ -12,7 +12,7 @@ let cardsContainerCopy = cardsContainer.cloneNode(true);
 let count = 0; // count moves to one side
 
 const windowSize = window.innerWidth;
-const cardsNumber = windowSize > 1280 ? 3 : windowSize > 768 ? 2 : 1;
+const cardsNumber = windowSize >= 1280 ? 3 : windowSize >= 768 ? 2 : 1;
 
 let forwardArrow = document.querySelector(".forward-arrow");
 let backArrow = document.querySelector(".back-arrow");
