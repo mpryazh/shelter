@@ -161,6 +161,10 @@ nav li a:active {
   margin-top: 163px;
   gap: 42px;
 }
+#not-only h2 {
+  letter-spacing: normal;
+  width: 400px;
+}
 #not-only p {
   color: var(--color-dark-s);
 }
@@ -448,6 +452,9 @@ nav li a:active {
 #donation h3 {
   width: 300px;
 }
+#donation h5 {
+  letter-spacing: normal;
+}
 #donation p {
   color: var(--color-dark-l);
   margin: 0;
@@ -494,6 +501,7 @@ footer h3 {
 }
 #locations {
   width: 320px;
+  margin-left: 13px;
 }
 .info {
   display: flex;
@@ -660,9 +668,10 @@ footer a {
     margin-top: 60px;
     align-items: center;
   }
-  #start-screen h2 {
-    font-size: 25px;
+  #not-only h2 {
     width: 200px;
+    font-size: 25px;
+    letter-spacing: 0.06em;
   }
   h3 {
     font-size: 25px;
@@ -712,6 +721,7 @@ footer a {
     position: absolute;
     right: 0;
     top: 0;
+    overflow: auto;
     background-color: var(--color-dark-3xl);
     display: flex;
     flex-direction: column;
