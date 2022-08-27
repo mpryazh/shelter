@@ -1,0 +1,131 @@
+header {
+    padding: 30px 40px;
+    max-width: 1280px;
+    margin: auto;
+}
+.logo h1, nav a {
+    color: var(--color-dark-l);
+}
+.logo p {
+    color: var(--color-dark-3xl);
+}
+nav a:hover {
+    color: var(--color-dark-m);
+}
+nav a:active {
+    color: var(--color-dark-m);
+}
+nav li a:active {
+    color: var(--color-dark-m);
+}
+nav li {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+}
+.current-page a {
+    color: var(--color-dark-3xl);
+}
+main {
+    padding: 80px 40px 100px 40px;
+    box-sizing: border-box;
+    background-color: var(--color-light-l);
+}
+main h3 {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
+#pagination {
+    width: 1200px;
+    overflow: hidden;
+    margin: 60px auto;
+}
+#pages {
+    display: flex;
+    gap: 30px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
+    row-gap: 30px;
+    justify-content: center;    
+}
+#cards-navigation {
+    margin: 0 auto;
+    width: fit-content;
+    display:flex;
+    justify-content: center;
+    gap: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+}
+button:disabled {
+    color: var(--color-dark-s);
+    border-color: var(--color-dark-s);
+    cursor: default;
+}
+button:disabled:hover {
+    color: var(--color-dark-s);
+    border-color: var(--color-dark-s);
+    background-color: transparent;
+}
+#current-page {
+    background-color: var(--color-primary);
+}
+#current-page:hover {
+    border-color: var(--color-primary);
+    cursor: default;
+}
+#locations {
+    margin-left: 10px;
+}
+
+@media all and (max-width: 1279px) {
+    main {
+        padding-bottom: 74px;
+    }
+    header {
+        padding: 30px;
+    }
+    nav ul {
+        gap: 43px;
+    }
+    #pagination {
+        width: 580px;
+        margin: 0 auto;
+    }
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 30px auto 40px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    header {
+        padding: 30px 50px 30px 10px;
+    }
+    nav {
+        margin: 0;
+    }
+    main {
+        padding: 42px 10px;
+    }
+    #pagination {
+        width: 270px;
+    }
+    .cards {
+        margin: 42px auto;
+        grid-template-columns: 1fr;
+    }
+    #cards-navigation {
+        gap: 10px;
+    }
+    #mobile-menu {
+        background-color: var(--color-light-s);
+    }
+}
